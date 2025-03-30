@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Racing Game</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center mb-4">Horse Racing Game</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="game-container">
+                    <canvas id="gameCanvas"></canvas>
+                    <div class="controls mt-3 text-center">
+                        <button id="startButton" class="btn btn-success btn-lg">Start Race</button>
+                        <button id="resetButton" class="btn btn-secondary btn-lg ms-2" disabled>Reset</button>
+                    </div>
+                </div>
+                
+                <div class="race-status mt-4">
+                    <h3 class="text-center">Race Status</h3>
+                    <div id="positions" class="positions-list">
+                        <!-- Positions will be updated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
